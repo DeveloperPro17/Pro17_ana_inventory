@@ -2,7 +2,6 @@ import 'package:application/BottomBar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-
 import 'bottom.dart';
 
 class insightcard extends StatefulWidget {
@@ -507,6 +506,10 @@ class _insightcardState extends State<insightcard> {
                     const ListTile(
                       title: Text('Settings'),
                       leading: Icon(Icons.settings),
+                    ),
+                    const ListTile(
+                      title: Text('LogOut'),
+                      leading: Icon(Icons.logout),
                     ),
                   ]),
                 )
