@@ -507,9 +507,22 @@ class _insightcardState extends State<insightcard> {
                       title: Text('Settings'),
                       leading: Icon(Icons.settings),
                     ),
-                    const ListTile(
-                      title: Text('LogOut'),
+                    ListTile(
                       leading: Icon(Icons.logout),
+                      iconColor: Colors.white,
+                      title: const Text(
+                        'LogOut',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 255, 255, 255),
+                        ),
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Addproduct()));
+                      },
+                      tileColor: const Color.fromARGB(255, 146, 25, 27),
                     ),
                   ]),
                 )
