@@ -1,4 +1,5 @@
 import 'package:application/BottomBar.dart';
+import 'package:application/Loginscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -520,7 +521,7 @@ class _insightcardState extends State<insightcard> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => Addproduct()));
+                                builder: (context) => Loginscreen()));
                       },
                       tileColor: const Color.fromARGB(255, 146, 25, 27),
                     ),
