@@ -24,6 +24,7 @@ class _qrcodeState extends State<qrcode> {
         leading: IconButton(
           icon: SvgPicture.asset(
             'assets/images/Arrow 3.svg',
+
             //  color: Colors.white,
           ),
           onPressed: () {
