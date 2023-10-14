@@ -2,6 +2,7 @@ import 'package:application/BottomBar.dart';
 import 'package:application/Loginscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 import 'bottom.dart';
 
@@ -11,6 +12,10 @@ class insightcard extends StatefulWidget {
 }
 
 class _insightcardState extends State<insightcard> {
+  Future<void> logout() async {
+    final GoogleSignIn googleSign = GoogleSignIn();
+    await googleSign.signOut();
+  }
   @override
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
@@ -517,7 +522,9 @@ class _insightcardState extends State<insightcard> {
                           color: Color.fromARGB(255, 255, 255, 255),
                         ),
                       ),
-                      onTap: () {
+                      onTap: () async {
+                        await logout();
+                        Navigator.pop(context);
                         Navigator.push(
                             context,
                             MaterialPageRoute(
