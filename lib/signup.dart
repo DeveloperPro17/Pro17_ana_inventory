@@ -20,6 +20,9 @@ Widget signUpbtn() {
 class _SignupState extends State<Signup> {
   final _FormField = GlobalKey<FormState>();
   final emailcontroller = TextEditingController();
+  final fnamecontroller = TextEditingController();
+  final lnamecontroller = TextEditingController();
+  final numbercontroller = TextEditingController();
   final passcontroller = TextEditingController();
   final confirmcontroller = TextEditingController();
   bool passtoggle = true;
@@ -47,7 +50,7 @@ class _SignupState extends State<Signup> {
                 child: SingleChildScrollView(
                     // physics: const NeverScrollableScrollPhysics(),
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 25, vertical: 120),
+                        horizontal: 25, vertical: 100),
                     child: Form(
                       key: _FormField,
                       child: Column(
@@ -100,6 +103,135 @@ class _SignupState extends State<Signup> {
 
                                     if (!emailvalid) {
                                       return "ENTER VALID EMAIL";
+                                    }
+                                  },
+                                ),
+                              )
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              const Text(
+                                'First Name',
+                                style: TextStyle(
+                                    color: Colors.black38,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              SizedBox(height: 10),
+                              Container(
+                                alignment: Alignment.centerLeft,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  border: Border.all(color: Colors.black),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                height: 50,
+                                child: TextFormField(
+                                  controller: fnamecontroller,
+                                  keyboardType: TextInputType.emailAddress,
+                                  style: TextStyle(color: Colors.black87),
+                                  decoration: InputDecoration(
+                                    border: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                            color: Colors.transparent)),
+                                    contentPadding: EdgeInsets.only(top: 15),
+                                  ),
+                                  validator: (value) {
+                                    if (value!.isEmpty) {
+                                      return "Enter FirstName";
+                                    }
+                                  },
+                                ),
+                              )
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              const Text(
+                                'Last Name',
+                                style: TextStyle(
+                                    color: Colors.black38,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              SizedBox(height: 10),
+                              Container(
+                                alignment: Alignment.centerLeft,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  border: Border.all(color: Colors.black),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                height: 50,
+                                child: TextFormField(
+                                  controller: lnamecontroller,
+                                  keyboardType: TextInputType.emailAddress,
+                                  style: TextStyle(color: Colors.black87),
+                                  decoration: InputDecoration(
+                                    border: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                            color: Colors.transparent)),
+                                    contentPadding: EdgeInsets.only(top: 15),
+                                  ),
+                                  validator: (value) {
+                                    if (value!.isEmpty) {
+                                      return "Enter LastName";
+                                    }
+                                  },
+                                ),
+                              )
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              const Text(
+                                'Phone Number',
+                                style: TextStyle(
+                                    color: Colors.black38,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              SizedBox(height: 10),
+                              Container(
+                                alignment: Alignment.centerLeft,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  border: Border.all(color: Colors.black),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                height: 50,
+                                child: TextFormField(
+                                  controller: numbercontroller,
+                                  keyboardType: TextInputType.emailAddress,
+                                  style: TextStyle(color: Colors.black87),
+                                  decoration: InputDecoration(
+                                    border: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                            color: Colors.transparent)),
+                                    contentPadding: EdgeInsets.only(top: 15),
+                                  ),
+                                  validator: (value) {
+                                    if (value!.isEmpty) {
+                                      return "Enter PhoneNumber";
+                                    } else if (numbercontroller.text.length >
+                                        10) {
+                                      return " LENGTH SHOULD BE MORE THAN 10 numbers";
+                                    } else if (numbercontroller.text.length <
+                                        10) {
+                                      return "length should be less than 10 numbers";
                                     }
                                   },
                                 ),
