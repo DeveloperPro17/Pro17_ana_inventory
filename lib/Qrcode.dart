@@ -1,4 +1,5 @@
 import 'package:application/BottomBar.dart';
+import 'package:application/scanner.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -12,7 +13,6 @@ class qrcode extends StatefulWidget {
 }
 
 class _qrcodeState extends State<qrcode> {
-  // QRViewController? _controller;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,6 +24,7 @@ class _qrcodeState extends State<qrcode> {
         leading: IconButton(
           icon: SvgPicture.asset(
             'assets/images/Arrow 3.svg',
+
             //  color: Colors.white,
           ),
           onPressed: () {
@@ -78,10 +79,18 @@ class _qrcodeState extends State<qrcode> {
                         ),
                       ],
                     ),
-                    SvgPicture.asset(
-                      'assets/images/Group 193.svg',
-                      height: 40,
-                      width: 50,
+                    IconButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => scanner()),
+                        );
+                      },
+                      icon: SvgPicture.asset(
+                        'assets/images/Group 193.svg',
+                        height: 60,
+                        width: 70,
+                      ),
                     ),
                   ],
                 ),
