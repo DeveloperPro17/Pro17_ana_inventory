@@ -1,10 +1,9 @@
 import 'package:application/BottomBar.dart';
 import 'package:application/scanner.dart';
+import 'package:application/scanning.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
-
-
 
 class qrcode extends StatefulWidget {
   const qrcode({super.key});
@@ -104,4 +103,3 @@ class _qrcodeState extends State<qrcode> {
     );
   }
 }
-
