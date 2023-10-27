@@ -1,9 +1,9 @@
 import 'package:application/BottomBar.dart';
 import 'package:application/scanner.dart';
+import 'package:application/scanning.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
-//import 'package:qr_code_scanner/qr_code_scanner.dart';
+import 'package:qr_code_scanner/qr_code_scanner.dart';
 
 class qrcode extends StatefulWidget {
   const qrcode({super.key});
@@ -83,7 +83,7 @@ class _qrcodeState extends State<qrcode> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => scanner()),
+                          MaterialPageRoute(builder: (context) => MyWidget()),
                         );
                       },
                       icon: SvgPicture.asset(
@@ -101,21 +101,5 @@ class _qrcodeState extends State<qrcode> {
       ),
       bottomNavigationBar: BottomBar(),
     );
-  }
-
-  // void _onQRViewCreated(QRViewController controller) {
-  //   setState(() {
-  //   //  _controller = controller;
-  //   });
-  //   controller.scannedDataStream.listen((scanData) {
-  //     print('Scanned Data: $scanData');
-  //     // Handle the scanned data here
-  //   });
-  // }
-
-  @override
-  void dispose() {
-    // _controller?.dispose();
-    super.dispose();
   }
 }

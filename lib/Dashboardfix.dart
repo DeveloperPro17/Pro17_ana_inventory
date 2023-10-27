@@ -68,7 +68,6 @@ class SalesData {
 }
 
 class _DashboardfixState extends State<Dashboardfix> {
-  
   @override
   Widget build(BuildContext context) {
     // final double screenWidth = MediaQuery.of(context).size.width;
@@ -76,10 +75,10 @@ class _DashboardfixState extends State<Dashboardfix> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
+        // padding:EdgeInsets.all(20),
         child: SingleChildScrollView(
-          // padding:EdgeInsets.all(20),
           child: Container(
-            height: 1350,
+            // height: 1350,
             width: double.infinity,
             child: Column(
               children: [
