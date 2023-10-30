@@ -44,7 +44,7 @@ class _SignupState extends State<Signup> {
 
       // Obtain the auth details from the request
       final GoogleSignInAuthentication googleAuth =
-      await googleUser.authentication;
+          await googleUser.authentication;
 
       // Create a new credentials
       final AuthCredential credential = GoogleAuthProvider.credential(
@@ -54,7 +54,7 @@ class _SignupState extends State<Signup> {
 
       // Sign in the user with the credentials
       final UserCredential userCredential =
-      await auth.signInWithCredential(credential);
+          await auth.signInWithCredential(credential);
       return userCredential;
     } catch (error) {
       print('Error during Google Sign-In: $error');
@@ -496,8 +496,13 @@ class _SignupState extends State<Signup> {
                                       onPressed: () async {
                                         await signInWithGoogle();
                                         if (mounted) {
-                                          Navigator.push(context,
-                                            MaterialPageRoute(builder: (context) => Dashboardfix(),),);
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  Dashboardfix(),
+                                            ),
+                                          );
                                         }
                                       },
                                       child: Row(
