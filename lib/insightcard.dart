@@ -16,6 +16,7 @@ class _insightcardState extends State<insightcard> {
     final GoogleSignIn googleSign = GoogleSignIn();
     await googleSign.signOut();
   }
+
   @override
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
