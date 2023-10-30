@@ -83,7 +83,7 @@ class _qrcodeState extends State<qrcode> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => scanner()),
+                          MaterialPageRoute(builder: (context) => MyWidget()),
                         );
                       },
                       icon: SvgPicture.asset(
