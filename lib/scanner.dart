@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:application/Inventroy.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -72,7 +73,7 @@ class _MyWidgetState extends State<MyWidget> {
                     key: qrKey,
                     onQRViewCreated: _onQRViewCreated,
                     overlay: QrScannerOverlayShape(
-                      borderColor: Color.fromARGB(255, 8, 238, 77),
+                      borderColor: Color.fromARGB(255, 245, 13, 106),
                       //overlayColor: Color.fromARGB(255, 118, 193, 158),
                       borderRadius: 10,
                       borderLength: 35,
@@ -91,19 +92,43 @@ class _MyWidgetState extends State<MyWidget> {
               child: Center(
                 child: (result != null)
                     ? Text(
-                        'Barcode Type: ${describeEnum(result!.format)}   Data: ${result!.code}')
-                    : Text('Scan a code'),
+                        'Barcode Type: ${describeEnum(result!.format)}   Result: ${result!.code}')
+                    : Text('Scanning....'),
               ),
             ),
-            ElevatedButton(
-              onPressed: () {
-                // Toggle the flash
-                if (qrviewcontroller != null) {
-                  qrviewcontroller?.toggleFlash();
-                }
-              },
-              child: Icon(Icons.flash_on),
+            SizedBox(
+              height: 30,
             ),
+            Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+              ElevatedButton(
+                onPressed: () {
+                  // Toggle the flash
+                  if (qrviewcontroller != null) {
+                    qrviewcontroller?.toggleFlash();
+                  }
+                },
+                child: Icon(
+                  Icons.flashlight_on,
+                  color: Colors.white,
+                ),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color.fromARGB(255, 174, 29, 29)),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Inventroy()),
+                  );
+                },
+                child: Text(
+                  'Add product',
+                  style: TextStyle(color: Colors.white),
+                ),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color.fromARGB(255, 174, 29, 29)),
+              ),
+            ]),
             SizedBox(
               height: 50,
             ),

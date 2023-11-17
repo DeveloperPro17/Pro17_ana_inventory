@@ -61,6 +61,7 @@ class _SignupState extends State<Signup> {
       return null;
     }
   }
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -399,6 +400,9 @@ class _SignupState extends State<Signup> {
                                 emailcontroller.clear();
                                 passcontroller.clear();
                                 confirmcontroller.clear();
+                                fnamecontroller.clear();
+                                lnamecontroller.clear();
+                                numbercontroller.clear();
                               }
                             },
                             child: Container(

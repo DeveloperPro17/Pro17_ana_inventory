@@ -32,16 +32,33 @@ class _OnboardingState extends State<Onboarding> {
                   content: Text('Do you want to exit the app?'),
                   actions: <Widget>[
                     ElevatedButton(
-                      child: Text('No'),
+                      child: Text(
+                        'No',
+                        style:
+                            TextStyle(color: Color.fromARGB(255, 211, 11, 78)),
+                      ),
                       onPressed: () {
                         Navigator.of(context).pop(false);
                       },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                        shadowColor: Colors.white,
+                      ),
                     ),
                     ElevatedButton(
-                      child: Text('Yes'),
+                      child: Text(
+                        'Yes',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 211, 11, 78),
+                        ),
+                      ),
                       onPressed: () {
                         Navigator.of(context).pop(true);
                       },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                        shadowColor: Colors.white,
+                      ),
                     ),
                   ],
                 );

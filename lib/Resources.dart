@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class Customwidget extends StatelessWidget {
   final String text;
   final String hinttext;
+  
 
   const Customwidget({required this.text, required this.hinttext});
 

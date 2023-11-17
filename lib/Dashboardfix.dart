@@ -78,7 +78,7 @@ class _DashboardfixState extends State<Dashboardfix> {
         child: SingleChildScrollView(
           // padding:EdgeInsets.all(20),
           child: Container(
-            height: double.infinity,
+            height: 1350,
             width: double.infinity,
             child: Column(
               children: [
