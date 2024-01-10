@@ -1,7 +1,6 @@
-import 'package:application/Qrcode.dart';
+import 'package:application/screens/scanning.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 
 class BottomBar extends StatelessWidget {
   const BottomBar({super.key});

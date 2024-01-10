@@ -1,18 +1,18 @@
-import 'package:application/BottomBar.dart';
-import 'package:application/Dashboardfix.dart';
+import 'package:application/screens/BottomBar.dart';
+import 'package:application/screens/Dashboardfix.dart';
 import 'package:application/InventroyButton.dart';
 import 'package:application/Resources.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class Inventroy extends StatefulWidget {
-  const Inventroy({super.key});
+class R6add extends StatefulWidget {
+  const R6add({super.key});
 
   @override
-  State<Inventroy> createState() => _InventroyState();
+  State<R6add> createState() => _R6addState();
 }
 
-class _InventroyState extends State<Inventroy> {
+class _R6addState extends State<R6add> {
   @override
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
@@ -95,7 +95,7 @@ class _InventroyState extends State<Inventroy> {
                         child: const Padding(
                           padding: EdgeInsets.only(top: 10, left: 5),
                           child: Text(
-                            ' Inventory / Stock List /Add Prdoucts',
+                            ' Inventory /R6/Add Prdouct',
                             textAlign: TextAlign.justify,
                             style: TextStyle(
                               fontWeight: FontWeight.w600,

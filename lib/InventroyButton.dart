@@ -10,7 +10,7 @@ class InventroyButton extends StatelessWidget {
     // final double screenheight = MediaQuery.of(context).size.height;
     return Container(
       width: screenWidth - 40,
-      height:40,
+      height: 40,
 
       // padding: EdgeInsets.all(20),
       child: ElevatedButton(

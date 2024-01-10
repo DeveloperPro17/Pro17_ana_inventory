@@ -1,5 +1,5 @@
-import 'package:application/BottomBar.dart';
-import 'package:application/insightcard.dart';
+import 'package:application/screens/BottomBar.dart';
+import 'package:application/screens/menubar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -75,10 +75,10 @@ class _DashboardfixState extends State<Dashboardfix> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
-        // padding:EdgeInsets.all(20),
         child: SingleChildScrollView(
+          // padding:EdgeInsets.all(20),
           child: Container(
-            // height: 1350,
+            height: 1350,
             width: double.infinity,
             child: Column(
               children: [

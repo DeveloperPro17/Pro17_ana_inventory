@@ -1,7 +1,7 @@
 import 'dart:ffi';
 
-import 'package:application/Dashboardfix.dart';
-import 'package:application/Loginscreen.dart';
+import 'package:application/screens/Dashboardfix.dart';
+import 'package:application/screens/Loginscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -44,7 +44,7 @@ class _SignupState extends State<Signup> {
 
       // Obtain the auth details from the request
       final GoogleSignInAuthentication googleAuth =
-      await googleUser.authentication;
+          await googleUser.authentication;
 
       // Create a new credentials
       final AuthCredential credential = GoogleAuthProvider.credential(
@@ -54,13 +54,14 @@ class _SignupState extends State<Signup> {
 
       // Sign in the user with the credentials
       final UserCredential userCredential =
-      await auth.signInWithCredential(credential);
+          await auth.signInWithCredential(credential);
       return userCredential;
     } catch (error) {
       print('Error during Google Sign-In: $error');
       return null;
     }
   }
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -399,6 +400,9 @@ class _SignupState extends State<Signup> {
                                 emailcontroller.clear();
                                 passcontroller.clear();
                                 confirmcontroller.clear();
+                                fnamecontroller.clear();
+                                lnamecontroller.clear();
+                                numbercontroller.clear();
                               }
                             },
                             child: Container(
@@ -496,8 +500,13 @@ class _SignupState extends State<Signup> {
                                       onPressed: () async {
                                         await signInWithGoogle();
                                         if (mounted) {
-                                          Navigator.push(context,
-                                            MaterialPageRoute(builder: (context) => Dashboardfix(),),);
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  Dashboardfix(),
+                                            ),
+                                          );
                                         }
                                       },
                                       child: Row(

@@ -1,8 +1,8 @@
 import 'dart:ffi';
 
-import 'package:application/Dashboardfix.dart';
-import 'package:application/insightcard.dart';
-import 'package:application/signup.dart';
+import 'package:application/screens/Dashboardfix.dart';
+import 'package:application/screens/menubar.dart';
+import 'package:application/screens/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -54,7 +54,7 @@ class _LoginscreenState extends State<Loginscreen> {
 
       // Obtain the auth details from the request
       final GoogleSignInAuthentication googleAuth =
-      await googleUser.authentication;
+          await googleUser.authentication;
 
       // Create a new credentials
       final AuthCredential credential = GoogleAuthProvider.credential(
@@ -64,13 +64,14 @@ class _LoginscreenState extends State<Loginscreen> {
 
       // Sign in the user with the credentials
       final UserCredential userCredential =
-      await auth.signInWithCredential(credential);
+          await auth.signInWithCredential(credential);
       return userCredential;
     } catch (error) {
       print('Error during Google Sign-In: $error');
       return null;
     }
   }
+
   @override
   Widget build(BuildContext context) {
     // final double screenWidth = MediaQuery.of(context).size.width;
@@ -318,8 +319,13 @@ class _LoginscreenState extends State<Loginscreen> {
                                         onPressed: () async {
                                           await signInWithGoogle();
                                           if (mounted) {
-                                            Navigator.push(context,
-                                              MaterialPageRoute(builder: (context) => Dashboardfix(),),);
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    Dashboardfix(),
+                                              ),
+                                            );
                                           }
                                         },
                                         child: Row(

@@ -1,14 +1,16 @@
-import 'package:application/BottomBar.dart';
-import 'package:application/Inventroy.dart';
+import 'package:application/screens/BottomBar.dart';
+import 'package:application/menubar_items/inventroy/c72/c72add.dart';
+
+import 'package:application/menubar_items/inventroy/r6/R6add.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class Addproduct extends StatefulWidget {
+class c72 extends StatefulWidget {
   @override
-  State<Addproduct> createState() => AddproductState();
+  State<c72> createState() => c72State();
 }
 
-class AddproductState extends State<Addproduct> {
+class c72State extends State<c72> {
   @override
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
@@ -87,18 +89,17 @@ class AddproductState extends State<Addproduct> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const Text(
-                        'Inventory / Stock List',
+                        'Inventory / c72',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 14,
+                          fontSize: 16,
                         ),
                       ),
                       ElevatedButton(
                           onPressed: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(
-                                  builder: (context) => const Inventroy()),
+                              MaterialPageRoute(builder: (context) => c72add()),
                             );
                           },
                           style: ElevatedButton.styleFrom(
@@ -114,7 +115,7 @@ class AddproductState extends State<Addproduct> {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Text(
-                                'Add products',
+                                'Add product',
                                 style: TextStyle(
                                   fontSize: 13,
                                   fontWeight: FontWeight.w500,
@@ -135,14 +136,14 @@ class AddproductState extends State<Addproduct> {
                 child: DataTable(
                   columnSpacing: 40,
                   columns: const [
-                    DataColumn(label: Text('No')),
-                    DataColumn(label: Text('No.Of.Products')),
-                    DataColumn(label: Text('Product Categorey')),
-                    DataColumn(label: Text('Products')),
-                    DataColumn(label: Text('Quantity')),
-                    DataColumn(label: Text('New Sales Return')),
-                    DataColumn(label: Text('New Purchase')),
-                    DataColumn(label: Text('Reports')),
+                    DataColumn(label: Text('Serial No')),
+                    DataColumn(label: Text('Model No')),
+                    DataColumn(label: Text('MAC Address')),
+                    DataColumn(label: Text('MFD Date')),
+                    DataColumn(label: Text('Order Date')),
+                    DataColumn(label: Text('Received Date')),
+                    DataColumn(label: Text('Sold To')),
+                    DataColumn(label: Text('Sale date')),
                   ],
                   rows: [
                     DataRow(
@@ -151,12 +152,12 @@ class AddproductState extends State<Addproduct> {
                               .shade300, // Background color for this DataRow
                         ),
                         cells: const [
-                          DataCell(Text('01')),
+                          DataCell(Text('HR600A231200014')),
                           DataCell(Text('0123')),
-                          DataCell(Text('Reader')),
-                          DataCell(Text('4567')),
-                          DataCell(Text('05')),
-                          DataCell(Text('567')),
+                          DataCell(Text('CD:67:D5:38: BE: F6')),
+                          DataCell(Text('null')),
+                          DataCell(Text('null')),
+                          DataCell(Text('herdx')),
                           DataCell(Text('521')),
                           DataCell(
                             Text('Details'),
