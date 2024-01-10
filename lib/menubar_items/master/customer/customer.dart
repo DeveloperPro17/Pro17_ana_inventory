@@ -1,5 +1,4 @@
 import 'package:application/menubar_items/master/customer/customeradd.dart';
-import 'package:application/menubar_items/master/product/productadd.dart';
 import 'package:application/screens/BottomBar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';

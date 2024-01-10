@@ -1,7 +1,5 @@
 import 'package:application/screens/BottomBar.dart';
 import 'package:application/menubar_items/inventroy/c72/c72add.dart';
-
-import 'package:application/menubar_items/inventroy/r6/R6add.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

@@ -2,7 +2,6 @@ import 'package:application/screens/BottomBar.dart';
 import 'package:application/screens/Dashboardfix.dart';
 import 'package:application/InventroyButton.dart';
 import 'package:application/Resources.dart';
-import 'package:application/menubar_items/inventroy/c72/c72.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
