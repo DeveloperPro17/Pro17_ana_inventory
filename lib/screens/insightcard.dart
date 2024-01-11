@@ -196,7 +196,7 @@ class _insightcardState extends State<insightcard> {
                           ),
                         ]),
                     ExpansionTile(
-                        title: Text(
+                        title: const Text(
                           'Master Details',
                           selectionColor: Colors.grey,
                           style: TextStyle(
@@ -238,7 +238,7 @@ class _insightcardState extends State<insightcard> {
                             tileColor: Color.fromARGB(255, 146, 25, 27),
                           ),
                           ListTile(
-                            title: Text(
+                            title: const Text(
                               'Add Customer',
                               style: TextStyle(
                                 color: Color.fromARGB(255, 251, 250, 250),
@@ -253,7 +253,7 @@ class _insightcardState extends State<insightcard> {
                             tileColor: Color.fromARGB(255, 146, 25, 27),
                           ),
                           ListTile(
-                            title: Text(
+                            title: const Text(
                               'Add Vendor',
                               style: TextStyle(
                                 color: Color.fromARGB(255, 251, 250, 250),
@@ -263,7 +263,7 @@ class _insightcardState extends State<insightcard> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => vendor()));
+                                      builder: (context) => Vendor()));
                             },
                             tileColor: Color.fromARGB(255, 146, 25, 27),
                           ),

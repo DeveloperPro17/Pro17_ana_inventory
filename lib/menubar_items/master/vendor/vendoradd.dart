@@ -4,14 +4,14 @@ import 'package:application/Resources.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class vendoradd extends StatefulWidget {
-  const vendoradd({super.key});
+class Vendoradd extends StatefulWidget {
+  const Vendoradd({super.key});
 
   @override
-  State<vendoradd> createState() => _vendoraddState();
+  State<Vendoradd> createState() => _VendoraddState();
 }
 
-class _vendoraddState extends State<vendoradd> {
+class _VendoraddState extends State<Vendoradd> {
   @override
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
