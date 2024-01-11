@@ -129,58 +129,60 @@ class customerState extends State<customer> {
               ]),
               //  scroll
             ),
-            Column(children: [
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: DataTable(
-                  columnSpacing: 40,
-                  columns: const [
-                    DataColumn(label: Text('C Name')),
-                    DataColumn(label: Text('C Address')),
-                  ],
-                  rows: [
-                    DataRow(
-                        color: MaterialStateColor.resolveWith(
-                          (states) => Colors.grey
-                              .shade300, // Background color for this DataRow
-                        ),
-                        cells: const [
-                          DataCell(Text('herdx')),
-                          DataCell(Text('usa')),
-                        ]),
+            Column(
+                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: DataTable(
+                      columnSpacing: 180,
+                      columns: const [
+                        DataColumn(label: Text('C Name')),
+                        DataColumn(label: Text('C Address')),
+                      ],
+                      rows: [
+                        DataRow(
+                            color: MaterialStateColor.resolveWith(
+                              (states) => Colors.grey
+                                  .shade300, // Background color for this DataRow
+                            ),
+                            cells: const [
+                              DataCell(Text('herdx')),
+                              DataCell(Text('usa')),
+                            ]),
 
-                    const DataRow(cells: [
-                      DataCell(Text('herdx')),
-                      DataCell(Text('usa')),
-                    ]),
-                    DataRow(
-                        color: MaterialStateColor.resolveWith(
-                          (states) => Colors.grey
-                              .shade300, // Background color for this DataRow
-                        ),
-                        cells: const [
+                        const DataRow(cells: [
                           DataCell(Text('herdx')),
                           DataCell(Text('usa')),
                         ]),
-                    const DataRow(cells: [
-                      DataCell(Text('herdx')),
-                      DataCell(Text('usa')),
-                    ]),
-                    DataRow(
-                        color: MaterialStateColor.resolveWith(
-                          (states) => Colors.grey
-                              .shade300, // Background color for this DataRow
-                        ),
-                        cells: const [
+                        DataRow(
+                            color: MaterialStateColor.resolveWith(
+                              (states) => Colors.grey
+                                  .shade300, // Background color for this DataRow
+                            ),
+                            cells: const [
+                              DataCell(Text('herdx')),
+                              DataCell(Text('usa')),
+                            ]),
+                        const DataRow(cells: [
                           DataCell(Text('herdx')),
                           DataCell(Text('usa')),
                         ]),
+                        DataRow(
+                            color: MaterialStateColor.resolveWith(
+                              (states) => Colors.grey
+                                  .shade300, // Background color for this DataRow
+                            ),
+                            cells: const [
+                              DataCell(Text('herdx')),
+                              DataCell(Text('usa')),
+                            ]),
 
-                    // Add more rows as needed
-                  ],
-                ),
-              ),
-            ]),
+                        // Add more rows as needed
+                      ],
+                    ),
+                  ),
+                ]),
           ]),
         ),
       )),

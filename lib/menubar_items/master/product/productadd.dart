@@ -4,14 +4,14 @@ import 'package:application/Resources.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class productadd extends StatefulWidget {
-  const productadd({super.key});
+class Productadd extends StatefulWidget {
+  const Productadd({super.key});
 
   @override
-  State<productadd> createState() => _productaddState();
+  State<Productadd> createState() => _ProductaddState();
 }
 
-class _productaddState extends State<productadd> {
+class _ProductaddState extends State<Productadd> {
   @override
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;

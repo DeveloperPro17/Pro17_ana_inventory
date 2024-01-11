@@ -3,12 +3,13 @@ import 'package:application/screens/BottomBar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class product extends StatefulWidget {
+class Product extends StatefulWidget {
+  const Product({super.key});
   @override
-  State<product> createState() => productState();
+  State<Product> createState() => ProductState();
 }
 
-class productState extends State<product> {
+class ProductState extends State<Product> {
   @override
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
@@ -98,7 +99,7 @@ class productState extends State<product> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => productadd()),
+                                  builder: (context) => Productadd()),
                             );
                           },
                           style: ElevatedButton.styleFrom(

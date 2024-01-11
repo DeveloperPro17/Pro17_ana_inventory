@@ -105,16 +105,11 @@ class _customeraddState extends State<customeradd> {
                       ),
                       const SizedBox(height: 10),
                       const Customwidget(
-                          text: 'Manufacturer Name', hinttext: 'M name'),
+                          text: 'Customer Name', hinttext: 'C name'),
                       const Customwidget(
-                          text: 'Manufacturer Address', hinttext: 'M Address'),
+                          text: 'Customer Address', hinttext: 'C Address'),
                       const Customwidget(
-                          text: 'Manufacturer Address 2',
-                          hinttext: 'M Address 2'),
-                      const Customwidget(
-                          text: 'Manufacturer Country', hinttext: 'M country'),
-                      const Customwidget(
-                          text: 'Manufacturer State', hinttext: 'M State'),
+                          text: 'Customer Address 2', hinttext: 'C Address 2'),
                       const InventroyButton(text: 'SAVE'),
                     ]),
               )),
