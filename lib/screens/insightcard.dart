@@ -1,15 +1,13 @@
 import 'package:application/menubar_items/inventroy/c72/c72.dart';
 import 'package:application/menubar_items/master/customer/customer.dart';
 import 'package:application/menubar_items/master/product/product.dart';
-
+import 'package:application/menubar_items/master/vendor/vendor.dart';
 import 'package:application/screens/BottomBar.dart';
 import 'package:application/screens/Loginscreen.dart';
 import 'package:application/menubar_items/inventroy/R5/R5.dart';
-import 'package:application/menubar_items/inventroy/c72/c72add.dart';
+
 import 'package:application/menubar_items/inventroy/r6/R6.dart';
-
 import 'package:application/menubar_items/master/manufacturer/manufacturer.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -265,7 +263,7 @@ class _insightcardState extends State<insightcard> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => c72add()));
+                                      builder: (context) => vendor()));
                             },
                             tileColor: Color.fromARGB(255, 146, 25, 27),
                           ),

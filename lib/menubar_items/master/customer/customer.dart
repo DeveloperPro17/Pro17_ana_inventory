@@ -135,12 +135,8 @@ class customerState extends State<customer> {
                 child: DataTable(
                   columnSpacing: 40,
                   columns: const [
-                    DataColumn(label: Text('P Name')),
-                    DataColumn(label: Text('P Model')),
-                    DataColumn(label: Text('P DESC ')),
-                    DataColumn(label: Text('P Manufacturer')),
-                    DataColumn(label: Text('P desc')),
-                    DataColumn(label: Text('P desc2')),
+                    DataColumn(label: Text('C Name')),
+                    DataColumn(label: Text('C Address')),
                   ],
                   rows: [
                     DataRow(
@@ -149,21 +145,13 @@ class customerState extends State<customer> {
                               .shade300, // Background color for this DataRow
                         ),
                         cells: const [
-                          DataCell(Text('R6')),
-                          DataCell(Text('R6')),
-                          DataCell(Text('UHF Sled Reader')),
-                          DataCell(Text('XXX')),
-                          DataCell(Text('nulL')),
-                          DataCell(Text('NULL')),
+                          DataCell(Text('herdx')),
+                          DataCell(Text('usa')),
                         ]),
 
                     const DataRow(cells: [
-                      DataCell(Text('R5')),
-                      DataCell(Text('R5')),
-                      DataCell(Text('Wearable BT RFID Reader')),
-                      DataCell(Text('XXX')),
-                      DataCell(Text('nulL')),
-                      DataCell(Text('NULL')),
+                      DataCell(Text('herdx')),
+                      DataCell(Text('usa')),
                     ]),
                     DataRow(
                         color: MaterialStateColor.resolveWith(
@@ -171,20 +159,12 @@ class customerState extends State<customer> {
                               .shade300, // Background color for this DataRow
                         ),
                         cells: const [
-                          DataCell(Text('C72')),
-                          DataCell(Text('C72')),
-                          DataCell(Text('DC72 Details')),
-                          DataCell(Text('XXX')),
-                          DataCell(Text('nulL')),
-                          DataCell(Text('NULL')),
+                          DataCell(Text('herdx')),
+                          DataCell(Text('usa')),
                         ]),
                     const DataRow(cells: [
-                      DataCell(Text('01')),
-                      DataCell(Text('0123')),
-                      DataCell(Text('Reader')),
-                      DataCell(Text('4567')),
-                      DataCell(Text('05')),
-                      DataCell(Text('567')),
+                      DataCell(Text('herdx')),
+                      DataCell(Text('usa')),
                     ]),
                     DataRow(
                         color: MaterialStateColor.resolveWith(
@@ -192,12 +172,8 @@ class customerState extends State<customer> {
                               .shade300, // Background color for this DataRow
                         ),
                         cells: const [
-                          DataCell(Text('R6')),
-                          DataCell(Text('R6')),
-                          DataCell(Text('UHF Sled Reader')),
-                          DataCell(Text('XXX')),
-                          DataCell(Text('nulL')),
-                          DataCell(Text('NULL')),
+                          DataCell(Text('herdx')),
+                          DataCell(Text('usa')),
                         ]),
 
                     // Add more rows as needed
